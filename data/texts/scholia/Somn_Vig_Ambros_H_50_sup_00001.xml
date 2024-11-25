@@ -251,7 +251,7 @@
 </editorialDecl>
          <schemaRef url="https://gitup.uni-potsdam.de/TELOTA/cluster-alte-welt/cagb/cagb-data-github/-/tree/main/data/schemata/cagb_texte_11_24.rng"/>
       </encodingDesc>
-      <revisionDesc>
+      <revisionDesc status="final">
          <change when-iso="2024-12-31" who="mamueller">Version 1.0</change>
       </revisionDesc>
    </teiHeader>
