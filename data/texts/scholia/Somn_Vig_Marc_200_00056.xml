@@ -223,7 +223,7 @@ gemeinsamen Vorlage (so <bibl sameAs="zotero-116802-Z5C78SHT" type="sek_weitere"
             vorgenommen. Diese sind alle als Normalisierungen ausgezeichnet. Stile Normalisierungen wurden nicht vorgenommen.</p>
     </punctuation>
 </editorialDecl>
-         <schemaRef url="_platzhalter_git_pfad/cagb_texte.rng"/>
+         <schemaRef url="https://gitup.uni-potsdam.de/TELOTA/cluster-alte-welt/cagb/cagb-data-github/-/tree/main/data/schemata/cagb_texte_11_24.rng"/>
       </encodingDesc>
       <revisionDesc>
          <change when-iso="2024-12-31" who="mamueller">Version 1.0</change>
