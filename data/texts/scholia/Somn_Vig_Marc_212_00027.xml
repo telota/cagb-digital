@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:telota="http://www.telota.de"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     telota:doctype="document cagb"
+     xml:id="cagb0330401">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Scholion: Somn. Vig. 02, 455b12 (Marc. 212)
+        </title>
+            <author cert="high" key="cagb7664936" role="writer">Bessarion</author>
+            <editor>
+               <persName ref="https://orcid.org/0009-0001-8601-3587">
+                  <surname>Müller</surname>
+                  <forename>Martin</forename>
+               </persName>
+            </editor>
+            <respStmt>
+               <persName ref="https://orcid.org/0009-0001-8601-3587">
+                  <surname>Müller</surname>
+                  <forename>Martin</forename>
+               </persName>
+               <resp ref="https://credit.niso.org/contributor-roles/conceptualization/"
+                     from="2021-07"
+                     to="2024-12">Erstellung des Konzepts</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/methodology/"
+                     from="2023-03"
+                     to="2024-12">Datenmodellierung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/software/"
+                     from="2021-07"
+                     to="2024-12">Entwicklung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/validation/"
+                     from="2023-03"
+                     to="2024-12">Schemaentwicklung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/investigation/"
+                     from="2021-07"
+                     to="2024-12">Transkription, wissenschaftliche Recherche, Kommentar und deutsche Übersetzung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/data-curation/"
+                     from="2023-03"
+                     to="2024-12">Datenbearbeitung und -anreicherung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/writing-original-draft/"
+                     from="2021-07"
+                     to="2024-12">Dokumentation</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0001-9233-0653">
+                  <surname>Fechner</surname>
+                  <forename>Martin</forename>
+               </persName>
+               <orgName ref="http://www.bbaw.de/telota/telota">TELOTA - The Electronic Life Of The Academy</orgName>
+               <resp ref="https://credit.niso.org/contributor-roles/conceptualization/"
+                     from="2023-03"
+                     to="2024-12">Mitwirkung am Konzepts</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/methodology/"
+                     from="2023-03"
+                     to="2024-12">Datenmodellierung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/software/"
+                     from="2023-03"
+                     to="2024-12">Entwicklung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/validation/"
+                     from="2023-03"
+                     to="2024-12">Schemaentwicklung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/data-curation/"
+                     from="2023-03"
+                     to="2024-12">Datenbearbeitung und -anreicherung</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0009-0003-3822-7673">
+                  <surname>Fischer</surname>
+                  <forename>Gordon</forename>
+               </persName>
+               <orgName ref="http://www.bbaw.de/telota/telota">TELOTA - The Electronic Life Of The Academy</orgName>
+               <resp ref="https://credit.niso.org/contributor-roles/methodology/"
+                     from="2023-03"
+                     to="2024-12">Datenmodellierung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/software/"
+                     from="2023-03"
+                     to="2024-12">Entwicklung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/data-curation/"
+                     from="2023-03"
+                     to="2024-12">Datenbearbeitung und -anreicherung</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0009-0005-0968-0510">
+                  <surname>Agiotis</surname>
+                  <forename>Nikos</forename>
+               </persName>
+               <resp ref="https://credit.niso.org/contributor-roles/conceptualization/"
+                     from="2023-03"
+                     to="2024-12">Mitwirkung am Konzepts</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0009-0005-4856-5400">
+                  <surname>Koch</surname>
+                  <forename>Lutz</forename>
+               </persName>
+               <resp ref="https://credit.niso.org/contributor-roles/project-administration/"
+                     from="2021-07"
+                     to="2022-11">Arbeitsstellenleitung</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0009-0002-3552-2987">
+                  <surname>Brockmann</surname>
+                  <forename>Christian</forename>
+               </persName>
+               <resp ref="https://credit.niso.org/contributor-roles/supervision/"
+                     from="2023-01"
+                     to="2024-12">Projektleitung</resp>
+            </respStmt>
+         </titleStmt>
+         <editionStmt>
+            <p>Scholion: Somn. Vig. 02, 455b12 (Marc. 212)
+        , In: CAGB digital. Hg. v. Berlin Brandenburgischen Akademie der Wissenschaften. Berlin. Version 1. 0 vom 31.12.2024. URL:<ref target="https://cagb-digital.de/id/cagb0330401">https://cagb-digital.de/id/cagb0330401</ref>
+            </p>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>
+               <ref target="https://www.bbaw.de">Berlin Brandenburgische Akademie der Wissenschaften</ref>
+            </publisher>
+            <pubPlace ref="https://www.geonames.org/2950159">Berlin</pubPlace>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution ShareAlike 4.0 International (CC BY-SA 4.0)</licence>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note type="Textsorte">Scholion</note>
+            <note type="derivation">original </note>
+            <note type="purpose">korrektur </note>
+            <relatedItem type="editedText">
+               <ref type="Bekker" subtype="Scholien" cRef="455b12"/>
+            </relatedItem>
+            <relatedItem>
+               <ref type="Identisch mit" target="#cagb6755807"/>
+            </relatedItem>
+            <relatedItem>
+               <ref type="Scholien" cRef="Somn. Vig."/>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <listWit n="Textzeugen">
+               <head>Textzeugen</head>
+               <witness xml:id="gl2_4md_45b">
+                  <title>Marc. 212</title>
+                  <idno type="sigle">Ga</idno>
+                  <idno type="diktyon">69683</idno>
+                  <locus rend="interline" facs="434r"/>
+               </witness>
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <date notBefore-iso="1438" notAfter-iso="1460" cert="high"/>
+         </creation>
+      </profileDesc>
+      <encodingDesc>
+         <refsDecl xml:id="Bekker">
+            <cRefPattern matchPattern="(\d?\d?\d?\d[ab]\d\d)"
+                         replacementPattern="#xpath(/tei:TEI/tei:text//tei:lb[@n='$1'])">
+               <p>Referenzen beziehen sich auf Bekkerzeilen. Diese werden alle explizit ohne Bindestrich eingegeben. 
+                            Der Bekkertext mit befindet sich in der Datenbank als XML</p>
+            </cRefPattern>
+         </refsDecl>
+         <refsDecl xml:id="CAG">
+            <cRefPattern matchPattern="(\d+(,\d)?):(\d+)\.(\d+)(–\d+\.\d+)?"
+                         replacementPattern="#xpath(/tei:TEI/tei:text//tei:lb[@n='$3.$4'])">
+               <p>Für Referenzen auf gedruckte CAG-Bände werden die Reihennummer,
+                            Seiten- und Zeilenzahl angegeben. Die referenzierten CAG-Texte befinden sich in der Datenbank als XML.</p>
+            </cRefPattern>
+         </refsDecl>
+         <refsDecl xml:id="other">
+            <cRefPattern matchPattern="(\d+)\.(\d+)(–\d+\.\d+)?"
+                         replacementPattern="#xpath(/tei:TEI/tei:text//tei:lb[@n='$1.$2'])">
+               <p>Für Referenzen auf andere Printeditionen werden Seiten- sowie Zeilenzahlen angegeben.</p>
+            </cRefPattern>
+         </refsDecl>
+         <refsDecl xml:id="CTS">
+            <cRefPattern matchPattern="(.+)"
+                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+         </refsDecl>
+         <editorialDecl>
+    <interpretation n="Bekker" method="markup">
+        <p>Zitate beziehungsweise inhaltliche Entsprechungen werden im Text mittels <gi>quote</gi> ausgezeichnet. 
+            Dabei zeigt <att>type</att>, ob es sich um ein wörtliches Zitat, Simile oder Paraphrase handelt. 
+            Innerhalb des <gi>quote</gi>, nach dem Text, steht ein <gi>ref</gi> mit <att>decl</att>
+            mit dem Wert "#Bekker" und <att>cRef</att> mit der Referenz
+            in der der entsprechenden <gi>refsDecl</gi> beschriebenen Form</p>
+    </interpretation>
+    <interpretation n="CAG" method="markup">
+        <p>Zitate beziehungsweise inhaltliche Entsprechungen werden im Text mittels <gi>quote</gi> ausgezeichnet. 
+            Dabei zeigt <att>type</att>, ob es sich um ein wörtliches Zitat, Simile oder Paraphrase handelt. 
+            Innerhalb des <gi>quote</gi>, nach dem Text, steht ein <gi>ref</gi> mit <att>decl</att>
+            mit dem Wert aus der <att>xml:id</att> der enstprechenden <gi>refsDecl</gi> und <att>cRef</att> mit der Referenz
+            in der der entsprechenden <gi>refsDecl</gi> beschriebenen Form</p>
+    </interpretation>
+    <correction method="markup">
+        <p>Im Falle von Korrekturen im Text durch die Edierenden wird <gi>choice</gi> verwendet,
+            welches <gi>sic</gi> und <gi>corr</gi> für das falsche Original und die Korrektur umschließt.</p>
+    </correction>
+    <normalization n="abbreviations" method="markup">
+        <p>Auflösung von Abkürzungen (auch nomina sacra) mittels <gi>choice</gi>, <gi>abbr</gi> und <gi>expan</gi>.</p>
+    </normalization>
+    <normalization n="suspension-unclear" method="markup">
+        <p>Ergänzung fehlender Endungen (Suspension), wenn diese zwar sehr wahrscheinlich, aber theoretisch nicht eindeutig sind sowie
+            fehlender Wortteile, die aus dem Kontext rekonstruierbar, aber durch physischen Verlust verloren sind, mittels <gi>ex</gi></p>
+    </normalization>
+    <normalization n="suspension-clear" method="silent">
+        <p>Ergänzung von durch den Schreiber ausgelassenen Wortendungen (Suspension), wenn die gemeinte Endung eindeutig ist.
+            Das ist dann der Fall, wenn es keine alternativ möglichen Worte gibt oder diese durch den Kontext ausgeschlossen sind.</p>
+    </normalization>
+    <punctuation marks="all">
+        <p>Die Interpunktion in der Transkription folgt jener des Originals unabhängig von modernen Konventionen.
+            Nur in Fällen, in denen die originale Interpunktion für moderne Lesende irreführend ist, wurde eine Normalisierung
+            vorgenommen. Diese sind alle als Normalisierungen ausgezeichnet. Stile Normalisierungen wurden nicht vorgenommen.</p>
+    </punctuation>
+</editorialDecl>
+         <schemaRef url="_platzhalter_git_pfad/cagb_texte.rng"/>
+      </encodingDesc>
+      <revisionDesc>
+         <change when-iso="2024-12-31" who="mamueller">Version 1.0</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="grc">
+      <body>
+         <quote type="witText">ἀδυνατεῖν <anchor type="insertSupplement" xml:id="x5p_qdh_1cc"/>.
+            ὅταν</quote>
+         <p>
+            <span type="supplement" target="x5p_qdh_1cc">αἰσθέσθαι</span>·</p>
+      </body>
+   </text>
+</TEI>
