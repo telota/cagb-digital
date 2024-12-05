@@ -1,0 +1,1731 @@
+<grammar xmlns="http://relaxng.org/ns/structure/1.0" xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0" xmlns:telota="http://www.telota.de" xmlns:sch="http://purl.oclc.org/dsdl/schematron" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes" ns="http://www.tei-c.org/ns/1.0">
+    <start>
+        <ref name="TEI"/>
+    </start>
+    <define name="TEI">
+        <element name="TEI">
+            <attribute name="xml:id">
+                <data type="ID"/>
+            </attribute>
+            <attribute name="telota:doctype">
+                <value>document cagb</value>
+            </attribute>
+            <ref name="teiHeader"/>
+            <oneOrMore>
+                <ref name="text"/>
+            </oneOrMore>
+        </element>
+    </define>
+    <!-- teiHeader ########################################## -->
+    <define name="teiHeader">
+        <element name="teiHeader">
+            <ref name="fileDesc"/>
+            <optional>
+                <ref name="profileDesc" />
+            </optional>
+            <optional>
+                <ref name="encodingDesc"/>
+            </optional>
+            <optional>
+                <ref name="revisionDesc"/>
+            </optional>
+        </element>
+    </define>
+    <define name="fileDesc">
+        <element name="fileDesc">
+            <ref name="titleStmt"/>
+            <ref name="editionStmt"/>
+            <ref name="publicationStmt"/>
+            <ref name="notesStmt"/>
+            <optional>
+                <ref name="sourceDesc"/>
+            </optional>
+        </element>
+    </define>
+    <define name="titleStmt">
+        <element name="titleStmt">
+            <element name="title">
+                <text/>
+                <optional>
+                    <element name="ref">
+                        <attribute name="cRef"/>
+                    </element>
+                </optional>
+            </element>
+            <optional>
+                <element name="author">
+                    <attribute name="key"></attribute>
+                    <attribute name="role">
+                        <choice>
+                            <value>writer</value>
+                            <value>author</value>
+                        </choice>
+                    </attribute>
+                    <attribute name="cert">
+                        <choice>
+                            <value>low</value>
+                            <value>medium</value>
+                            <value>high</value>
+                        </choice>
+                    </attribute>
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <element name="editor">
+                    <element name="persName">
+                        <attribute name="ref">
+                            <text/>
+                        </attribute>
+                        <element name="surname">
+                            <text/>
+                        </element>
+                        <element name="forename">
+                            <text/>
+                        </element>
+                    </element>
+                </element>
+            </optional>
+            <optional>
+                <oneOrMore>
+                    <ref name="respStmt"/>
+                </oneOrMore>
+            </optional>
+        </element>
+    </define>
+    <define name="editionStmt">
+        <element name="editionStmt">
+            <choice>
+                <element name="edition">
+                    <text/>
+                </element>
+                <element name="p">
+                    <text/>
+                    <optional>
+                        <element name="ref">
+                            <attribute name="target"></attribute>
+                            <text/>
+                        </element>
+                        <text/>
+                    </optional>
+                </element>
+            </choice>
+            <zeroOrMore>
+                <element name="respStmt">
+                    <element name="resp">
+                        <text/>
+                    </element>
+                    <choice>
+                        <element name="orgName">
+                            <text/>
+                        </element>
+                        <element name="name">
+                            <text/>
+                        </element>
+                    </choice>
+                </element>
+            </zeroOrMore>
+        </element>
+    </define>
+    <define name="publicationStmt">
+        <element name="publicationStmt">
+            <element name="publisher">
+                <choice>
+                    <text/>
+                    <element name="ref">
+                        <attribute name="target"></attribute>
+                        <text/>
+                    </element>
+                </choice>
+            </element>
+            <optional>
+                <element name="pubPlace">
+                    <attribute name="ref"></attribute>
+                    <text/>
+                </element>
+            </optional>
+            <optional>
+                <element name="availability">
+                    <element name="licence">
+                        <attribute name="target"></attribute>
+                        <text/>
+                    </element>
+                </element>
+            </optional>
+        </element>
+    </define>
+    <define name="notesStmt">
+        <element name="notesStmt">
+            <oneOrMore>
+            <element name="note">
+                <attribute name="type">
+                    <choice>
+                        <value></value>
+                        <value></value>
+                        <value>Textsorte</value>
+                        <value>remarkDocument</value>
+                        <value>editorial</value>
+                        <value>derivation</value>
+                        <value>purpose</value>
+                    </choice>
+                </attribute>
+                <optional>
+                    <attribute name="subtype">
+                        <value>bibliography</value>
+                    </attribute>
+                </optional>
+                <choice>
+                    <value>Kleintext</value>
+                    <value>Scholion</value>
+                    <value>Werk</value>
+                    <oneOrMore>
+                        <element name="p">
+                            <ref name="inlineElements_note"/>
+                        </element>
+                    </oneOrMore>
+                    <element name="list">
+                        <attribute name="type">
+                            <value>ordered</value>
+                        </attribute>
+                        <oneOrMore>
+                            <element name="item">
+                                <text/>
+                            </element>
+                        </oneOrMore>
+                    </element>
+                    <value>exegetisch</value>
+                    <value>grammatisch</value>
+                    <value>lexikalisch</value>
+                    <value>kritisch</value>
+                    <value>paraphrase</value>
+                    <value>varia_lectio</value>
+                    <value>supplement</value>
+                    <value>korrektur</value>
+                    <value>beispiel</value>
+                    <value>scilicet</value>
+                    <value>doxographisch</value>
+                    <value>struktur</value>
+                    <value>doxographisch exegetisch</value>
+                    <value>lexikalisch exegetisch</value>
+                    <value>grammatisch exegetisch</value>
+                    <value>grammatisch lexikalisch</value>
+                    <value>diagramm</value>
+                    <value>unklar</value>
+                    <value>original</value>
+                    <value>revision</value>
+                    <value>traditional</value>
+                    <value>unclear</value>
+                </choice>
+            </element>
+            </oneOrMore>
+            <zeroOrMore>
+                <choice>
+                <element name="relatedItem">
+                    <optional> 
+                        <attribute name="type">
+                            <choice>
+                                <value>adoptedBy</value>
+                                <value>adopted</value>
+                                <value>sameTradition</value>
+                                <value>sameTopic</value>
+                                <value>subScholion</value>
+                                <value>superScholion</value>
+                                <value>variante</value>
+                            </choice>
+                        </attribute>
+                    </optional>
+                    <oneOrMore>
+                    <element name="ref">
+                    <optional>
+                        <attribute name="type"></attribute>
+                    </optional>
+                    <optional>
+                        <attribute name="subtype"></attribute>
+                    </optional>
+                        <choice>
+                            <attribute name="cRef"></attribute>
+                            <attribute name="target"></attribute>
+                        </choice>
+                        <text></text>
+                    </element>
+                    </oneOrMore>
+                </element>
+                <element name="relatedItem">
+                    <attribute name="type">
+                        <value>editedText</value>
+                    </attribute>
+                    <element name="ref">
+                    <attribute name="type">
+                        <value>Bekker</value>
+                    </attribute>
+                    <attribute name="subtype"></attribute>
+                    <attribute name="cRef">
+                        <ref name="Bekker-lines-seperated-by-space"/>
+                    </attribute>
+                        <text></text>
+                    </element>
+                </element>
+                <element name="relatedItem">
+                    <attribute name="type">
+                        <value>editedText</value>
+                    </attribute>
+                    <element name="ref">
+                    <attribute name="type">
+                        <value>CAG</value>
+                    </attribute>
+                    <attribute name="subtype"></attribute>
+                    <attribute name="cRef">
+                        <ref name="CAG-lines"/>
+                    </attribute>
+                        <text></text>
+                    </element>
+                </element>
+                </choice>
+            </zeroOrMore>
+        </element>
+    </define>
+    <define name="sourceDesc">
+        <element name="sourceDesc">
+            <oneOrMore>
+                <element name="listWit">
+                    <attribute name="n"></attribute>
+                    <element name="head">
+                        <text/>
+                    </element>
+                    <oneOrMore>
+                        <ref name="witness"/>
+                    </oneOrMore>
+                </element>
+            </oneOrMore>
+        </element>
+    </define>
+    <define name="witness">
+        <element name="witness">
+            <optional>
+                <attribute name="xml:id">
+                    <data type="ID"/>
+                </attribute>
+            </optional>
+            <a:documentation>Der Titel der Quelle</a:documentation>
+            <element name="title">
+                <text/>
+            </element>
+            <optional>
+                <ref name="bibl" />
+            </optional>
+            <zeroOrMore>
+                <a:documentation>Hier können die Sigle, sowie weitere IDs festgehalten werden.</a:documentation>
+                <element name="idno">
+                    <attribute name="type">
+                        <choice>
+                            <value>sigle</value>
+                            <value>diktyon</value>
+                            <value>cagb</value>
+                            <value>cagb_bibl</value>
+                        </choice>
+                    </attribute>
+                    <optional>
+                        <a:documentation>Enthält Angaben, in welchen Apparaten die Quelle/Sigle vorkommt.</a:documentation>
+                        <attribute name="corresp"></attribute>
+                    </optional>
+                    <optional>
+                        <attribute name="n"/>
+                    </optional>
+                    <interleave>
+                        <text/>
+                        <zeroOrMore>
+                            <element name="g">
+                                <attribute name="rend"/>
+                                <text/>
+                            </element>
+                        </zeroOrMore>
+                    </interleave>
+                </element>
+            </zeroOrMore>
+            <optional>
+                <element name="locus">
+                    <attribute name="rend">
+                        <choice>
+                            <value>unspecified</value>
+                            <value>inner_margin</value>
+                            <value>outer_margin</value>
+                            <value>upper_margin</value>
+                            <value>lower_margin</value>
+                            <value>in_line</value>
+                            <value>interline</value>
+                            <value>margin_before_commentary</value>
+                            <value>interline inner_margin</value>
+                            <value>interline outer_margin</value>
+                            <value>interline margin_before_commentary</value>
+                            <value>upper_margin outer_margin</value>
+                            <value>outer_margin lower_margin</value>
+                            <value>inner_margin lower_margin</value>
+                            <value>upper_margin inner_margin</value>
+                        </choice>
+                    </attribute>
+                    <attribute name="facs"></attribute>
+                </element>
+            </optional>
+        </element>
+    </define>
+    <define name="profileDesc">
+        <element name="profileDesc">
+            <optional>
+            <element name="creation">
+                <element name="date">
+                    <attribute name="notBefore-iso">
+                        <choice>
+                            <ref name="YYYY"/>
+                            <ref name="YYYY-MM"/>
+                            <ref name="YYYY-MM-DD"/>
+                        </choice>
+                    </attribute>
+                    <attribute name="notAfter-iso">
+                        <choice>
+                            <ref name="YYYY"/>
+                            <ref name="YYYY-MM"/>
+                            <ref name="YYYY-MM-DD"/>
+                        </choice>
+                    </attribute>
+                    <attribute name="cert">
+                        <choice>
+                            <value>high</value>
+                            <value>medium</value>
+                            <value>low</value>
+                        </choice>
+                    </attribute>
+                </element>
+            </element>
+            </optional>
+            <optional>
+                <element name="textClass">
+                    <element name="catRef">
+                        <attribute name="target" />
+                    </element>
+                </element>
+            </optional>
+        </element>
+    </define>
+    <!-- Datumsangaben -->
+    
+    <define name="YYYY">
+        <data type="string">
+            <param name="pattern">\d{4}</param>
+        </data>
+    </define>
+    <define name="YYYY-MM">
+        <data type="string">
+            <param name="pattern">\d{4}-(0[1-9]|1[0-2])</param>
+        </data>
+    </define>
+    <define name="YYYY-MM-DD">
+        <data type="string">
+            <param name="pattern">\d{4}-(0[1-9]|1[0-2])-(0[1-9]|[12][0-9]|3[01])</param>
+        </data>
+    </define>
+    <define name="revisionDesc">
+        <element name="revisionDesc">
+            <optional>
+                <attribute name="status" />
+            </optional>
+            <zeroOrMore>
+                <element name="change">
+                    <attribute name="when-iso">
+                        <data type="date"/>
+                    </attribute>
+                    <optional>
+                        <attribute name="who"></attribute>
+                    </optional>
+                    <text/>
+                </element>
+            </zeroOrMore>
+        </element>
+    </define>
+    <!-- text/body ######################################### -->
+    <define name="text">
+        <element name="text">
+            <optional>
+                <attribute name="xml:lang">
+                    <choice>
+                        <value>grc</value>
+                        <value>de</value>
+                        <value>en</value>
+                        <value>la</value>
+                        <value>it</value>
+                        <value>fr</value>
+                        <value>el</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <element name="body">
+                <optional>
+                    <ref name="einleitung"/>
+                </optional>
+                <optional>
+                    <ref name="quote"></ref>
+                </optional>
+                <choice>
+                    <oneOrMore>
+                        <ref name="scholiengruppe"/>
+                    </oneOrMore>
+                    <ref name="trankriptionstext"/>
+                </choice>
+                <optional>
+                    <element name="figure">
+                        <choice>
+                            <element name="app">
+                                <element name="lem">
+                                    <attribute name="resp"></attribute>
+                                    <attribute name="cert">
+                                        <choice>
+                                            <value>high</value>
+                                            <value>medium</value>
+                                            <value>low</value>
+                                        </choice>
+                                    </attribute>
+                                    <ref name="syllogismus-diagramm"></ref>
+                                </element>
+                                <element name="rdg">
+                                    <attribute name="wit"></attribute>
+                                    <ref name="syllogismus-diagramm"></ref>
+                                </element>
+                            </element>
+                            <ref name="syllogismus-diagramm"></ref>
+                        </choice>
+                    </element>
+                </optional>
+                <optional>
+                    <ref name="trankriptionstext"/>
+                </optional>
+            </element>
+        </element>
+    </define>
+    <!-- SCHOLION ########################################## -->
+    <define name="scholiengruppe">
+        <element name="div">
+            <attribute name="type">
+                <value>scholia_group</value>
+            </attribute>
+            <optional>
+                <ref name="lemma"/>
+            </optional>
+            <oneOrMore>
+                <ref name="scholion"/>
+            </oneOrMore>
+        </element>
+    </define>
+    <define name="scholion">
+        <element name="div">
+            <attribute name="type">
+                <value>scholion</value>
+            </attribute>
+            <optional>
+                <attribute name="n"/>
+            </optional>
+            <optional>
+                <attribute name="subtype">
+                    <choice>
+                        <value>exegetisch</value>
+                        <value>grammatisch</value>
+                        <value>lexikalisch</value>
+                        <value>paraphrase</value>
+                        <value>varia_lectio</value>
+                        <value>supplement</value>
+                        <value>korrektur</value>
+                        <value>beispiel</value>
+                        <value>scilicet</value>
+                        <value>doxographisch</value>
+                        <value>struktur</value>
+                        <value>doxographisch exegetisch</value>
+                        <value>lexikalisch exegetisch</value>
+                        <value>grammatisch exegetisch</value>
+                        <value>grammatisch lexikalisch</value>
+                        <value>diagramm</value>
+                        <value>unklar</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <ref name="trankriptionstext"/>
+            <optional>
+                <ref name="persons"/>
+            </optional>
+            <optional>
+                <ref name="zeugen"/>
+            </optional>
+            <optional>
+                <ref name="quellen" />
+            </optional>
+            <optional>
+                <ref name="scholiengruppe" />
+            </optional>
+        </element>
+    </define>
+    <define name="persons">
+        <element name="note">
+            <attribute name="type">
+                <value>editorial</value>
+            </attribute>
+            <attribute name="subtype">
+                <value>persons</value>
+            </attribute>
+            <oneOrMore>
+                <element name="persName">
+                    <attribute name="role" />
+                    <optional>
+                        <attribute name="key" />
+                    </optional>
+                    <text/>
+                </element>
+            </oneOrMore>
+        </element>
+    </define>
+    <define name="zeugen">
+        <element name="note">
+            <attribute name="type">
+                <value>editorial</value>
+            </attribute>
+            <attribute name="subtype">
+                <value>witness</value>
+            </attribute>
+            <oneOrMore>
+                <element name="witDetail">
+                    <attribute name="wit"/>
+                    <optional>
+                        <attribute name="place">
+                            <choice>
+                                <value>unspecified</value>
+                                <value>inner_margin</value>
+                                <value>outer_margin</value>
+                                <value>upper_margin</value>
+                                <value>lower_margin</value>
+                                <value>in_line</value>
+                                <value>interline</value>
+                                <value>margin_before_commentary</value>
+                                <value>interline inner_margin</value>
+                                <value>interline outer_margin</value>
+                                <value>interline margin_before_commentary</value>
+                                <value>upper_margin outer_margin</value>
+                                <value>outer_margin lower_margin</value>
+                                <value>inner_margin lower_margin</value>
+                                <value>upper_margin inner_margin</value>
+                            </choice>
+                        </attribute>
+                    </optional>
+                    <optional>
+                        <attribute name="n"/>
+                    </optional>
+                    <text/>
+                </element>
+            </oneOrMore>
+        </element>
+    </define>
+    <define name="quellen">
+        <element name="note">
+            <attribute name="type">
+                <value>editorial</value>
+            </attribute>
+            <attribute name="subtype">
+                <value>sources</value>
+            </attribute>
+            <oneOrMore>
+                <element name="witDetail">
+                    <attribute name="wit"/>
+                    <optional>
+                        <attribute name="place"/>
+                    </optional>
+                    <optional>
+                        <attribute name="n"/>
+                    </optional>
+                    <text/>
+                </element>
+            </oneOrMore>
+        </element>
+    </define>
+    <!-- TRANSKRIPTION ##################################### -->
+    <define name="trankriptionstext">
+        <optional>
+            <ref name="einleitung"/>
+        </optional>
+        <interleave>
+            <ref name="structureElements" />
+            <ref name="blockElements"/>
+            <zeroOrMore><ref name="uebersetzung"/></zeroOrMore>
+        </interleave>
+        <optional>
+            <ref name="kommentar"/>
+        </optional>
+        <optional>
+            <ref name="bibliographie"/>
+        </optional>
+    </define>
+    <define name="einleitung">
+        <element name="note">
+            <attribute name="type">
+                <value>editorial</value>
+            </attribute>
+            <attribute name="subtype">
+                <value>introduction</value>
+            </attribute>
+            <oneOrMore>
+                <element name="p">
+                    <ref name="inlineElements_note"/>
+                </element>
+            </oneOrMore>
+            <optional>
+                <element name="list">
+                    <attribute name="type">
+                        <value>ordered</value>
+                    </attribute>
+                    <oneOrMore>
+                        <element name="item">
+                            <text/>
+                        </element>
+                    </oneOrMore>
+                </element>
+            </optional>
+        </element>
+    </define>
+    <define name="uebersetzung">
+        <element name="note">
+            <attribute name="type">
+                <value>editorial</value>
+            </attribute>
+            <attribute name="subtype">
+                <value>translation</value>
+            </attribute>
+            <optional>
+                <ref name="kommentar" />
+            </optional>
+            <ref name="blockElements"/>
+        </element>
+    </define>
+    <define name="kommentar">
+        <element name="note">
+            <attribute name="type">
+                <value>editorial</value>
+            </attribute>
+            <attribute name="subtype">
+                <value>comment</value>
+            </attribute>
+            <oneOrMore>
+                <element name="p">
+                    <interleave>
+                        <zeroOrMore>
+                            <ref name="anmerkung"></ref>
+                        </zeroOrMore>
+                        <text/>
+                    </interleave>
+                </element>
+            </oneOrMore>
+        </element>
+    </define>
+    <define name="bibliographie">
+        <element name="note">
+            <attribute name="type">
+                <value>editorial</value>
+            </attribute>
+            <attribute name="subtype">
+                <value>bibliography</value>
+            </attribute>
+            <element name="list">
+                <attribute name="type">
+                    <value>ordered</value>
+                </attribute>
+                <oneOrMore>
+                    <element name="item">
+                        <zeroOrMore>
+                            <element name="bibl">
+                                <attribute name="sameAs">
+                                </attribute>
+                                <attribute name="type">
+                                </attribute>
+                                <text/>
+                            </element>
+                        </zeroOrMore>
+                        <text/>
+                    </element>
+                </oneOrMore>
+            </element>
+        </element>
+    </define>
+    <!-- STRUKTURELEMENTE ################################### -->
+    <define name="structureElements">
+        <interleave>
+            <zeroOrMore><ref name="div"></ref></zeroOrMore>
+        </interleave>
+    </define>
+    <define name="div">
+        <element name="div">
+            <attribute name="type">
+                <choice>
+                    <value>book</value>
+                    <value>chapter</value>
+                    <value>section</value>
+                </choice>
+            </attribute>
+            <optional>
+                <element name="note">
+                    <attribute name="type">
+                        <value>number</value>
+                    </attribute>
+                    <ref name="inlineElements" />
+                </element>
+            </optional>
+            <optional>
+                <element name="head">
+                    <ref name="inlineElements"></ref>
+                </element>
+            </optional>
+            <interleave>
+                <ref name="structureElements" />
+                <ref name="blockElements"/>
+                <zeroOrMore><ref name="uebersetzung"/></zeroOrMore>
+            </interleave>
+        </element>
+    </define>
+    <!-- BLOCKELEMENTE ################################### -->
+    <define name="blockElements">
+        <interleave>
+            <zeroOrMore><ref name="figure"></ref></zeroOrMore>
+            <zeroOrMore><ref name="lemma"></ref></zeroOrMore>
+            <zeroOrMore><ref name="list"/></zeroOrMore>
+            <zeroOrMore><ref name="p"></ref></zeroOrMore>
+        </interleave>
+    </define>
+    <define name="lemma">
+        <element name="cit">
+            <attribute name="type">
+                <value>lemma</value>
+            </attribute>
+            <optional>
+                <attribute name="subtype"></attribute>
+            </optional>
+            <element name="quote">
+                <ref name="inlineElements" />
+            </element>
+            <element name="ref">
+                <attribute name="cRef"/>
+                <optional>
+                    <attribute name="type">
+                    <choice>
+                        <value>Bekker</value>
+                        <value>CAG</value>
+                        <value>other</value>
+                    </choice>
+                    </attribute>
+                </optional>
+                <optional>
+                    <attribute name="subtype"/>
+                </optional>
+            </element>
+        </element>
+    </define>
+    <define name="list">
+        <element name="list">
+            <attribute name="type">
+                <choice><value>bulleted</value><value>ordered</value></choice>
+            </attribute>
+            <oneOrMore>
+                <element name="item">
+                    <ref name="inlineElements"></ref>
+                </element>
+            </oneOrMore>
+        </element>
+    </define>
+    <define name="p">
+        <element name="p">
+            <ref name="inlineElements"></ref>
+            <optional>
+                <ref name="syllogismus-diagramm"></ref>
+            </optional>
+            <zeroOrMore>
+                <element name="span">
+                    <attribute name="type">
+                        <value>supplement</value>
+                    </attribute>
+                    <attribute name="target"></attribute>
+                    <ref name="inlineElements"></ref>
+                </element>
+            </zeroOrMore>
+            <optional>
+                <ref name="inlineElements"></ref>
+            </optional>
+        </element>
+    </define>
+    <define name="figure">
+        <element name="figure">
+            <attribute name="facs"></attribute>
+            <attribute name="hand"></attribute>
+            <element name="figDesc">
+                <text />
+            </element>
+        </element>
+    </define>
+    <!-- INLINEELEMENTE ################################### -->
+    <define name="inlineElements">
+        <interleave>
+            <zeroOrMore><ref name="abbr"></ref></zeroOrMore>
+            <zeroOrMore><ref name="add"></ref></zeroOrMore>
+            <zeroOrMore> <ref name="anchor" /></zeroOrMore>
+            <zeroOrMore> 
+                <element name="span">
+                    <attribute name="type"></attribute>
+                    <attribute name="target"></attribute>
+                    <text/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore><ref name="app"></ref></zeroOrMore>
+            <zeroOrMore><ref name="seg_orig_note"/></zeroOrMore>
+            <zeroOrMore> <ref name="bibl" /></zeroOrMore>
+            <zeroOrMore>
+                <element name="choice">
+                    <choice>
+                        <ref name="choice_sic_corr"></ref>
+                        <ref name="choice_orig_reg"/>
+                        <ref name="choice_abbr_expan"></ref>
+                    </choice>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore><ref name="damage"></ref></zeroOrMore>
+            <zeroOrMore>
+                <element name="del">
+                    <choice>
+                        <ref name="del"></ref>
+                        <ref name="del_gap"></ref>
+                    </choice>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore><ref name="ex"></ref></zeroOrMore>
+            <zeroOrMore><ref name="g" /></zeroOrMore>
+            <zeroOrMore><ref name="gap"></ref></zeroOrMore>
+            <zeroOrMore><ref name="hi"></ref></zeroOrMore>
+            <zeroOrMore> <ref name="index" /></zeroOrMore>
+            <zeroOrMore><ref name="lb"/></zeroOrMore>
+            <zeroOrMore><ref name="note"/></zeroOrMore>
+            <zeroOrMore><ref name="orgName"></ref></zeroOrMore>
+            <zeroOrMore><ref name="pb"/></zeroOrMore>
+            <zeroOrMore><ref name="persName"></ref></zeroOrMore>
+            <zeroOrMore><ref name="placeName"></ref></zeroOrMore>
+            <zeroOrMore><ref name="quote"/></zeroOrMore>
+            <zeroOrMore><ref name="rs"></ref></zeroOrMore>
+            <zeroOrMore><ref name="subst"></ref></zeroOrMore>
+            <zeroOrMore><ref name="supplied"/></zeroOrMore>
+            <zeroOrMore><ref name="surplus"></ref></zeroOrMore>
+            <zeroOrMore><ref name="unclear"></ref></zeroOrMore>
+            <text/>
+            <zeroOrMore><ref name="ref"/></zeroOrMore>
+            <zeroOrMore>
+                <ref name="verweiszeichen"/>
+            </zeroOrMore>
+        </interleave>
+    </define>
+    <define name="inlineElements_note">
+        <interleave>
+            <zeroOrMore> <ref name="bibl" /></zeroOrMore>
+            <zeroOrMore><ref name="hi"></ref></zeroOrMore>
+            <zeroOrMore> <ref name="index" /></zeroOrMore>
+            <zeroOrMore><ref name="lb"/></zeroOrMore>
+            <zeroOrMore><ref name="note"/></zeroOrMore>
+            <zeroOrMore><ref name="orgName"></ref></zeroOrMore>
+            <zeroOrMore><ref name="persName"></ref></zeroOrMore>
+            <zeroOrMore><ref name="placeName"></ref></zeroOrMore>
+            <zeroOrMore><ref name="rs"></ref></zeroOrMore>
+            <text/>
+            <zeroOrMore><ref name="ref"/></zeroOrMore>
+        </interleave>
+    </define>
+    <define name="abbr">
+        <element name="abbr">
+            <text></text>
+        </element>
+    </define>
+    <define name="add">
+        <element name="add">
+            <optional><attribute name="resp"></attribute></optional>
+            <attribute name="place"></attribute>
+            <ref name="inlineElements"></ref>
+        </element>
+    </define>
+    <define name="anchor">
+        <element name="anchor">
+            <attribute name="xml:id"> <data type="ID" /></attribute>
+            <attribute name="type"/>
+        </element>
+    </define>
+    <define name="app">
+        <element name="app">
+            <optional>
+                <element name="lem">
+                    <optional>
+                        <attribute name="wit"></attribute>
+                    </optional>
+                    <optional>
+                        <attribute name="ana"></attribute>
+                    </optional>
+                    <ref name="inlineElements"></ref>
+                </element>
+            </optional>
+            <oneOrMore>
+                <element name="rdg">
+                    <attribute name="wit"></attribute>
+                    <optional>
+                        <attribute name="ana"></attribute>
+                    </optional>
+                    <ref name="inlineElements"></ref>
+                </element>
+            </oneOrMore>
+        </element>
+    </define>
+    <define name="seg_orig_note">
+        <element name="seg">
+            <attribute name="type"/>
+            <optional>
+                <attribute name="subtype" />
+            </optional>
+            <element name="orig">
+                <ref name="inlineElements"/>
+            </element>
+            <choice>
+                <element name="note">
+                    <attribute name="xml:id">
+                        <data type="ID"/>
+                    </attribute>
+                    <attribute name="type">
+                        <value>editorial</value>
+                     </attribute>
+                    <ref name="inlineElements"/>
+                </element>
+            </choice>
+        </element>
+    </define>
+    <define name="bibl">
+        <element name="bibl">
+            <attribute name="sameAs"/>
+            <optional>
+                <attribute name="type" />
+            </optional>
+            <text />
+        </element>
+    </define>
+    <define name="del">
+        <!-- <element name="del"> -->
+            <optional><attribute name="resp"/></optional>
+            <attribute name="rendition"/>
+            <ref name="inlineElements"/>
+        <!-- </element> -->
+    </define>
+    <define name="damage">
+        <element name="damage">
+            <empty></empty>
+        </element>
+    </define>
+    <define name="choice_sic_corr">
+        <!-- <element name="choice"> -->
+            <element name="sic">
+                <choice>
+                    <text></text>
+                    <element name="figure">
+                        <choice>
+                            <element name="app">
+                                <element name="lem">
+                                    <attribute name="resp"></attribute>
+                                    <attribute name="cert">
+                                        <choice>
+                                            <value>high</value>
+                                            <value>medium</value>
+                                            <value>low</value>
+                                        </choice>
+                                    </attribute>
+                                    <ref name="syllogismus-diagramm"></ref>
+                                </element>
+                                <element name="rdg">
+                                    <attribute name="wit"></attribute>
+                                    <ref name="syllogismus-diagramm"></ref>
+                                </element>
+                            </element>
+                            <ref name="syllogismus-diagramm"></ref>
+                        </choice>
+                    </element>
+                </choice>
+            </element>
+            <element name="corr">
+                <optional>
+                    <attribute name="cert"></attribute>
+                </optional>
+                <optional>
+                    <attribute name="type" />
+                </optional>
+                <choice>
+                    <text></text>
+                    <element name="figure">
+                        <choice>
+                            <element name="app">
+                                <element name="lem">
+                                    <attribute name="resp"></attribute>
+                                    <attribute name="cert">
+                                        <choice>
+                                            <value>high</value>
+                                            <value>medium</value>
+                                            <value>low</value>
+                                        </choice>
+                                    </attribute>
+                                    <ref name="syllogismus-diagramm"></ref>
+                                </element>
+                                <element name="rdg">
+                                    <attribute name="wit"></attribute>
+                                    <ref name="syllogismus-diagramm"></ref>
+                                </element>
+                            </element>
+                            <ref name="syllogismus-diagramm"></ref>
+                        </choice>
+                    </element>
+                </choice>
+            </element>
+        <!-- </element> -->
+    </define>
+    <define name="choice_orig_reg">
+        <!-- <element name="choice"> -->
+            <element name="orig">
+                <text />
+            </element>
+            <element name="reg">
+                <text />
+            </element>
+        <!-- </element> -->
+    </define>
+    <define name="choice_abbr_expan">
+        <!-- <element name="choice"> -->
+            <element name="abbr">
+                <text></text>
+            </element>
+            <element name="expan">
+                <interleave>
+                    <zeroOrMore>
+                        <element name="ex">
+                            <text></text>
+                        </element>
+                    </zeroOrMore>
+                    <text></text>
+                </interleave>
+            </element>
+        <!-- </element> -->
+    </define>
+    <define name="del_gap">
+        <!-- <element name="del"> -->
+            <element name="gap">
+                <attribute name="quantity"></attribute>
+                <attribute name="unit"></attribute>
+                <ref name="inlineElements"></ref>
+            </element>
+        <!-- </element> -->
+    </define>
+    <define name="ex">
+        <element name="ex">
+            <text></text>
+        </element>
+    </define>
+    <define name="g">
+        <element name="g">
+            <attribute name="ref">
+                <value>#typoHyphen</value>
+            </attribute>
+        </element>
+    </define>
+    <define name="gap">
+        <element name="gap">
+            <optional>
+                <attribute name="reason" />
+            </optional>
+            <attribute name="quantity"></attribute>
+            <attribute name="unit"></attribute>
+        </element>
+    </define>
+    <define name="hi">
+        <element name="hi">
+            <attribute name="rendition"/>
+            <ref name="inlineElements"></ref>
+        </element>
+    </define>
+    <define name="index">
+        <element name="index">
+            <attribute name="spanTo" />
+            <attribute name="corresp" />
+            <attribute name="indexName" />
+            <element name="term">
+                <text />
+            </element>
+        </element>
+    </define>
+    <define name="lb">
+        <element name="lb">
+            <optional>
+                <attribute name="ed" />
+            </optional>
+            <optional>
+                <attribute name="type"></attribute>
+            </optional>
+            <optional>
+                <attribute name="n"/>
+            </optional>
+            <optional>
+                <attribute name="break" />
+            </optional>
+            <empty/>
+        </element>
+    </define>
+    <define name="note">
+        <element name="note">
+            <choice>
+                <group><!-- Autorenanmerkungen -->
+                    <attribute name="place"></attribute>
+                    <attribute name="resp"></attribute>
+                    <ref name="inlineElements"></ref>
+                </group>
+                <group><!-- Herausgeberanmerkungen -->
+                    <text></text>
+                </group>
+            </choice>
+        </element>
+    </define>
+    <define name="orgName">
+        <element name="orgName">
+            <ref name="inlineElements"></ref>
+        </element>
+    </define>
+    <define name="pb">
+        <element name="pb">
+            <optional><attribute name="ed"/></optional>
+            <optional> <attribute name="facs"/> </optional>
+            <attribute name="n"/>
+            <empty/>
+        </element>
+    </define>
+    <define name="persName">
+        <element name="persName">
+            <optional>
+                <attribute name="key"/>
+            </optional>
+            <text></text>
+        </element>
+    </define>
+    <define name="placeName">
+        <element name="placeName">
+            <ref name="inlineElements"></ref>
+        </element>
+    </define>
+    <define name="quote">
+        <element name="quote">
+            <!--attribute name="xml:id">
+                <data type="ID"></data>
+            </attribute-->
+            <optional>
+                <attribute name="type">
+                    <choice>
+                        <value>Explizit</value>
+                        <value>Zitation</value>
+                        <value>Simile</value>
+                        <value>Paraphrasis</value>
+                        <value>witText</value>
+                    </choice>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="corresp" />
+            </optional>
+            <optional>
+                <attribute name="source"></attribute>
+            </optional>
+            <optional>
+                <attribute name="xml:id">
+                    <data type="ID"/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="next" />
+            </optional>
+            <optional>
+                <attribute name="prev" />
+            </optional>
+            <ref name="inlineElements"/>
+            <optional>
+                <element name="ref">
+                    <attribute name="decls">
+                        <choice>
+                            <value>#Bekker</value>
+                            <value>#CAG</value>
+                            <value>#CTS</value>
+                            <value>#other</value>
+                        </choice>
+                    </attribute>
+                    <attribute name="cRef">
+                        <choice>
+                                <ref name="Bekker-lines-seperated-by-space"/>
+                                <ref name="CAG-lines"/>
+                                <ref name="printed-lines"/>
+                                <ref name="CTS-URN"/>
+                        </choice>
+                    </attribute>
+                </element>
+            </optional>
+        </element>
+    </define>
+    <define name="ref">
+        <element name="ref">
+            <!--optional>
+                <attribute name="type"></attribute>
+                <attribute name="cRef"></attribute>
+            </optional-->
+            <optional><attribute name="target" /></optional>
+            <text></text>
+        </element>
+    </define>
+    <define name="rs">
+        <element name="rs">
+            <attribute name="type">
+                <choice>
+                    <value>term</value>
+                    <value>place</value>
+                </choice>
+            </attribute>
+            <optional>
+                <attribute name="key"/>
+            </optional>
+            <text></text>
+        </element>
+    </define>
+    <define name="subst">
+        <element name="subst">
+            <optional><attribute name="resp"/></optional>
+            <element name="del">
+                <attribute name="rendition"/>
+                <ref name="inlineElements"/>
+            </element>
+            <element name="add">
+                <attribute name="place"/>
+                <ref name="inlineElements"/>
+            </element>
+        </element>
+    </define>
+    <define name="supplied">
+        <element name="supplied">
+            <optional>
+                <attribute name="cert"></attribute>
+            </optional>
+            <text/>
+        </element>
+    </define>
+    <define name="surplus">
+        <element name="surplus">
+            <ref name="inlineElements"></ref>
+        </element>
+    </define>
+    <define name="unclear">
+        <element name="unclear">
+            <attribute name="reason"/>
+            <attribute name="cert" />
+            <ref name="inlineElements"></ref>
+        </element>
+    </define>
+    <!-- APPARATELEMENTE ######################################## -->
+    <define name="anmerkung">
+        <element name="seg">
+            <attribute name="type"/>
+            <element name="orig">
+                <text/>
+            </element>
+            <element name="note">
+                <attribute name="xml:id">
+                    <data type="ID"/>
+                </attribute>
+                <text/>
+            </element>
+        </element>
+    </define>
+    <!-- VERWEISZEICHEN-->
+    <define name="verweiszeichen">
+        <element name="metamark">
+                <attribute name="xml:id">
+                    <data type="ID"/>
+                </attribute>
+                <attribute name="function">
+                    <value>refSign</value>
+                </attribute>
+                <attribute name="place">
+                    <choice>
+                        <value>superlinear</value>
+                        <value>sublinear</value>
+                        <value>intralinear</value>
+                    </choice>
+                </attribute>
+                <optional>
+                    <attribute name="ed"/>
+                </optional>
+            </element>
+    </define>
+    <define name="Bekker-lines-seperated-by-space">
+        <data type="string">
+            <param name="pattern">(\d?\d?\d?\d[ab]\d\d\s)*\d?\d?\d?\d[ab]\d\d</param>
+        </data>
+    </define>
+    <define name="CAG-lines">
+        <data type="string">
+            <param name="pattern">(\d+(,\d)?):(\d+)\.(\d+)(–\d+\.\d+)?</param>
+        </data>
+    </define>
+    <define name="printed-lines">
+        <data type="string">
+            <param name="pattern">(\d+)\.(\d+)(–\d+\.\d+)?</param>
+        </data>
+    </define>
+    <define name="CTS-URN">
+        <data type="string">
+            <param name="pattern">urn:cts:.+</param>
+        </data>
+    </define>
+    <define name="diagramm-node">
+        <element name="node">
+            <attribute name="xml:id">
+                <text/>
+            </attribute>
+            <attribute name="corresp">
+                <text/>
+            </attribute>
+            <attribute name="ana">
+                <choice>   
+                    <value>unterbegriff</value>
+                    <value>mittelbegriff</value>
+                    <value>oberbegriff</value>
+                    <value>mittelProsyllogismus-b</value>
+                    <value>mittelProsyllogismus-c</value>
+                    <value>mittelProsyllogismus-d</value>
+                    <value>unklar</value>
+                    <value>synemmenon</value>
+                    <value>metalepsis</value>
+                    <value>hypothetische-conclusion</value>
+                </choice>
+            </attribute>
+            <oneOrMore>
+                <element name="label">
+                    <ref name="inlineElements"></ref>
+                </element>
+            </oneOrMore>
+        </element>
+    </define>
+    <define name="diagramm-arc">
+        <element name="arc">
+            <attribute name="from">
+                <text/>
+            </attribute>
+            <attribute name="to">
+                <text/>
+            </attribute>
+            <attribute name="corresp">
+                <text/>
+            </attribute>
+            <attribute name="ana">
+                <choice>
+                    <value>untersatz</value>
+                    <value>obersatz</value>
+                    <value>arist-conclusion</value>
+                    <value>prosyll-b-1</value>
+                    <value>prosyll-b-2</value>
+                    <value>prosyll-c-1</value>
+                    <value>prosyll-c-2</value>
+                    <value>prosyll-d-1</value>
+                    <value>prosyll-d-2</value>
+                    <value>unklar</value>
+                    <value>keineAussage</value>
+                </choice>
+            </attribute>
+            <oneOrMore>
+                <element name="label">
+                    <attribute name="ana">
+                        <choice>
+                            <value>SaP</value>
+                            <value>SeP</value>
+                            <value>SiP</value>
+                            <value>SoP</value>
+                            <value>none</value>
+                            <value>other</value>
+                        </choice>
+                    </attribute>
+                    <ref name="inlineElements"></ref>
+                </element>
+            </oneOrMore>
+            <optional>
+                    <element name="figure">
+                        <choice>
+                            <element name="app">
+                                <element name="lem">
+                                    <attribute name="resp"></attribute>
+                                    <attribute name="cert">
+                                        <choice>
+                                            <value>high</value>
+                                            <value>medium</value>
+                                            <value>low</value>
+                                        </choice>
+                                    </attribute>
+                                    <ref name="syllogismus-diagramm"></ref>
+                                </element>
+                                <element name="rdg">
+                                    <attribute name="wit"></attribute>
+                                    <ref name="syllogismus-diagramm"></ref>
+                                </element>
+                            </element>
+                            <ref name="syllogismus-diagramm"></ref>
+                        </choice>
+                    </element>
+            </optional>
+        </element>
+    </define>
+    <define name="syllogismus-diagramm">
+        <element name="graph">
+            <attribute name="type">
+                <value>directed</value>
+            </attribute>
+            <attribute name="corresp">
+                    <text/>
+            </attribute>
+            <attribute name="ana">
+                <choice>
+                    <value>1-barbara</value>
+                    <value>1-celarent</value>
+                    <value>1-darii</value>
+                    <value>1-ferio</value>
+                    <value>2-baroco</value>
+                    <value>2-cesare</value>
+                    <value>2-camestres</value>
+                    <value>2-festino</value>
+                    <value>3-bocardo</value>
+                    <value>3-datisi</value>
+                    <value>3-disamis</value>
+                    <value>3-ferison</value>
+                    <value>3-darapti</value>
+                    <value>3-felapton</value>
+                    <value>unklar</value>
+                    <value>hypothetisch</value>
+                    <value>falsch</value>
+                </choice>
+            </attribute>
+            <optional>
+                <attribute name="facs">
+                    <text/>
+                </attribute>
+            </optional>
+            <optional>
+                <attribute name="subtype">
+                    <value>beweis</value>
+                </attribute>
+            </optional>
+            <oneOrMore>
+                <ref name="diagramm-node"/>
+            </oneOrMore>
+            <zeroOrMore>
+                <ref name="diagramm-arc"/>
+            </zeroOrMore>
+            <zeroOrMore>
+                <element name="supplied">
+                    <attribute name="cert">
+                        <choice>
+                            <value>high</value>
+                            <value>medium</value>
+                            <value>low</value>
+                        </choice>
+                    </attribute>
+                    <ref name="diagramm-arc"/>
+                </element>
+            </zeroOrMore>
+            <zeroOrMore>
+                <ref name="diagramm-arc"/>
+            </zeroOrMore>
+        </element>
+    </define>
+    <define name="respStmt">
+        <element name="respStmt">
+            <element name="persName">
+                <attribute name="ref"></attribute>
+                <element name="surname">
+                    <text/>
+                </element>
+                <element name="forename">
+                    <text/>
+                </element>
+            </element>
+            <optional>
+                <element name="orgName">
+                    <attribute name="ref"></attribute>
+                    <text/>
+                </element>
+            </optional>
+            <oneOrMore>
+                <ref name="resp"/>
+            </oneOrMore>
+        </element>
+    </define>
+    <define name="resp">
+        <element name="resp">
+            <attribute name="ref">
+                <choice>
+                    <value>https://credit.niso.org/contributor-roles/conceptualization/</value>
+                    <value>https://credit.niso.org/contributor-roles/data-curation/</value>
+                    <value>https://credit.niso.org/contributor-roles/formal-analysis/</value>
+                    <value>https://credit.niso.org/contributor-roles/funding-acquisition/</value>
+                    <value>https://credit.niso.org/contributor-roles/investigation/</value>
+                    <value>https://credit.niso.org/contributor-roles/methodology/</value>
+                    <value>https://credit.niso.org/contributor-roles/project-administration/</value>
+                    <value>https://credit.niso.org/contributor-roles/software/</value>
+                    <value>https://credit.niso.org/contributor-roles/resources/</value>
+                    <value>https://credit.niso.org/contributor-roles/supervision/</value>
+                    <value>https://credit.niso.org/contributor-roles/visualization/</value>
+                    <value>https://credit.niso.org/contributor-roles/validation/</value>
+                    <value>https://credit.niso.org/contributor-roles/writing-original-draft/</value>
+                    <value>https://credit.niso.org/contributor-roles/writing-review-editing/</value>
+                </choice>
+            </attribute>
+            <attribute name="from">
+                <choice>
+                    <ref name="YYYY"/>
+                    <ref name="YYYY-MM"/>
+                    <ref name="YYYY-MM-DD"/>
+                </choice>
+            </attribute>
+            <attribute name="to">
+                <choice>
+                    <ref name="YYYY"/>
+                    <ref name="YYYY-MM"/>
+                    <ref name="YYYY-MM-DD"/>
+                </choice>
+            </attribute>
+            <text/>
+        </element>
+    </define>
+    <define name="encodingDesc">
+        <element name="encodingDesc">
+            <oneOrMore>
+                <ref name="refsDecl"/>
+            </oneOrMore>
+            <ref name="editorialDecl"/>
+            <element name="schemaRef">
+                <attribute name="url"></attribute>
+            </element>
+        </element>
+    </define>
+    <define name="refsDecl">
+        <element name="refsDecl">
+            <attribute name="xml:id"></attribute>
+            <element name="cRefPattern">
+                <attribute name="matchPattern"></attribute>
+                <attribute name="replacementPattern"></attribute>
+                <optional>
+                    <element name="p">
+                        <text/>
+                    </element>
+                </optional>
+            </element>
+        </element>
+    </define>
+    <define name="editorialDecl">
+        <element name="editorialDecl">
+            <zeroOrMore>
+                <element name="interpretation">
+                    <attribute name="n"></attribute>
+                    <attribute name="method">
+                        <value>markup</value>
+                    </attribute>
+                    <element name="p">
+                        <interleave>
+                            <zeroOrMore>
+                            <element name="gi">
+                                <text/>
+                            </element>
+                            </zeroOrMore>
+                            <zeroOrMore>
+                                <element name="att">
+                                    <text/>
+                                </element>
+                            </zeroOrMore>
+                            <text/>
+                        </interleave>
+                    </element>
+                </element>
+            </zeroOrMore>
+            <optional>
+                <element name="correction">
+                    <attribute name="method">
+                        <choice>
+                            <value>markup</value>
+                            <value>silent</value>
+                        </choice>
+                    </attribute>
+                    <element name="p">
+                        <interleave>
+                            <zeroOrMore>
+                            <element name="gi">
+                                <text/>
+                            </element>
+                            </zeroOrMore>
+                            <zeroOrMore>
+                                <element name="att">
+                                    <text/>
+                                </element>
+                            </zeroOrMore>
+                            <text/>
+                        </interleave>
+                    </element>
+                </element>
+            </optional>
+            <zeroOrMore>
+                <element name="normalization">
+                    <attribute name="n"></attribute>
+                    <attribute name="method">
+                        <choice>
+                            <value>markup</value>
+                            <value>silent</value>
+                        </choice>
+                    </attribute>
+                    <element name="p">
+                        <interleave>
+                            <zeroOrMore>
+                            <element name="gi">
+                                <text/>
+                            </element>
+                            </zeroOrMore>
+                            <zeroOrMore>
+                                <element name="att">
+                                    <text/>
+                                </element>
+                            </zeroOrMore>
+                            <text/>
+                        </interleave>
+                    </element>
+                </element>
+            </zeroOrMore>
+            <optional>
+                <element name="punctuation">
+                    <attribute name="marks">
+                        <choice>
+                            <value>none</value>
+                            <value>some</value>
+                            <value>all</value>
+                        </choice>
+                    </attribute>
+                    <element name="p">
+                        <interleave>
+                            <zeroOrMore>
+                            <element name="gi">
+                                <text/>
+                            </element>
+                            </zeroOrMore>
+                            <zeroOrMore>
+                                <element name="att">
+                                    <text/>
+                                </element>
+                            </zeroOrMore>
+                            <text/>
+                        </interleave>
+                    </element>
+                </element>
+            </optional>
+        </element>
+    </define>
+</grammar>

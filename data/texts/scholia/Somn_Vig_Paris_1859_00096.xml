@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0"
+     xmlns:telota="http://www.telota.de"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     telota:doctype="document cagb"
+     xml:id="cagb0332647">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>Scholion: Somn. Vig. 03, 456a32–34 (Paris. gr. 1859 H2)
+        </title>
+            <author cert="high" key="cagb8350975" role="writer">Matthaios Kamariotes</author>
+            <editor>
+               <persName ref="https://orcid.org/0009-0001-8601-3587">
+                  <surname>Müller</surname>
+                  <forename>Martin</forename>
+               </persName>
+            </editor>
+            <respStmt>
+               <persName ref="https://orcid.org/0009-0001-8601-3587">
+                  <surname>Müller</surname>
+                  <forename>Martin</forename>
+               </persName>
+               <resp ref="https://credit.niso.org/contributor-roles/conceptualization/"
+                     from="2021-07"
+                     to="2024-12">Erstellung des Konzepts</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/methodology/"
+                     from="2023-03"
+                     to="2024-12">Datenmodellierung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/software/"
+                     from="2021-07"
+                     to="2024-12">Entwicklung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/validation/"
+                     from="2023-03"
+                     to="2024-12">Schemaentwicklung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/investigation/"
+                     from="2021-07"
+                     to="2024-12">Transkription, wissenschaftliche Recherche, Kommentar und deutsche Übersetzung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/data-curation/"
+                     from="2023-03"
+                     to="2024-12">Datenbearbeitung und -anreicherung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/writing-original-draft/"
+                     from="2021-07"
+                     to="2024-12">Dokumentation</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0000-0001-9233-0653">
+                  <surname>Fechner</surname>
+                  <forename>Martin</forename>
+               </persName>
+               <orgName ref="http://www.bbaw.de/telota/telota">TELOTA - The Electronic Life Of The Academy</orgName>
+               <resp ref="https://credit.niso.org/contributor-roles/conceptualization/"
+                     from="2023-03"
+                     to="2024-12">Mitwirkung am Konzepts</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/methodology/"
+                     from="2023-03"
+                     to="2024-12">Datenmodellierung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/software/"
+                     from="2023-03"
+                     to="2024-12">Entwicklung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/validation/"
+                     from="2023-03"
+                     to="2024-12">Schemaentwicklung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/data-curation/"
+                     from="2023-03"
+                     to="2024-12">Datenbearbeitung und -anreicherung</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0009-0003-3822-7673">
+                  <surname>Fischer</surname>
+                  <forename>Gordon</forename>
+               </persName>
+               <orgName ref="http://www.bbaw.de/telota/telota">TELOTA - The Electronic Life Of The Academy</orgName>
+               <resp ref="https://credit.niso.org/contributor-roles/methodology/"
+                     from="2023-03"
+                     to="2024-12">Datenmodellierung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/software/"
+                     from="2023-03"
+                     to="2024-12">Entwicklung</resp>
+               <resp ref="https://credit.niso.org/contributor-roles/data-curation/"
+                     from="2023-03"
+                     to="2024-12">Datenbearbeitung und -anreicherung</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0009-0005-0968-0510">
+                  <surname>Agiotis</surname>
+                  <forename>Nikos</forename>
+               </persName>
+               <resp ref="https://credit.niso.org/contributor-roles/conceptualization/"
+                     from="2023-03"
+                     to="2024-12">Mitwirkung am Konzepts</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0009-0005-4856-5400">
+                  <surname>Koch</surname>
+                  <forename>Lutz</forename>
+               </persName>
+               <resp ref="https://credit.niso.org/contributor-roles/project-administration/"
+                     from="2021-07"
+                     to="2022-11">Arbeitsstellenleitung</resp>
+            </respStmt>
+            <respStmt>
+               <persName ref="https://orcid.org/0009-0002-3552-2987">
+                  <surname>Brockmann</surname>
+                  <forename>Christian</forename>
+               </persName>
+               <resp ref="https://credit.niso.org/contributor-roles/supervision/"
+                     from="2023-01"
+                     to="2024-12">Projektleitung</resp>
+            </respStmt>
+         </titleStmt>
+         <editionStmt>
+            <p>Scholion: Somn. Vig. 03, 456a32–34 (Paris. gr. 1859 H2)
+        , In: CAGB digital. Hg. v. Berlin Brandenburgischen Akademie der Wissenschaften. Berlin. Version 1. 0 vom 31.12.2024. URL:<ref target="https://cagb-digital.de/id/cagb0332647">https://cagb-digital.de/id/cagb0332647</ref>
+            </p>
+         </editionStmt>
+         <publicationStmt>
+            <publisher>
+               <ref target="https://www.bbaw.de">Berlin Brandenburgische Akademie der Wissenschaften</ref>
+            </publisher>
+            <pubPlace ref="https://www.geonames.org/2950159">Berlin</pubPlace>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution ShareAlike 4.0 International (CC BY-SA 4.0)</licence>
+            </availability>
+         </publicationStmt>
+         <notesStmt>
+            <note type="Textsorte">Scholion</note>
+            <note type="remarkDocument">
+               <p>Das Scholien stimmt inhaltlich an einigen Stellen sowohl mit Ps.-Galen,
+                            Ad Gaurum als auch dem Anonymus Christianus überein. Beide vertreten
+                            unterschiedliche Positionen. Der Anonymus geht davon aus, dass die
+                            Fähigkeit zur Wahrnehmung potentiell schon im Ungeborenen existiert,
+                            während Ps.-Galen dies ablehnt. Beide besprechen aber auch die Position
+                            des jeweils anderen, da diese von nicht näher genannten Personen
+                            vertreten worden sei. Der letzte Satz ist inhaltlich von Michael
+                            (ἐγγίνεται δὲ αὐτῷ ἡ αἰσθητικὴ ψυχὴ ὕστερον ἀποτεχθέντι) zu
+                            unterscheiden. Bei Michael entsteht die Wahrnehmungsfähigkeit erst nach
+                            der Geburt. Dem Scholion nach, wird sie mit der Geburt aber bloß
+                            „vollendet“ und war demnach vorher irgendwie unvollständig vorhanden. </p>
+               <p>Dies widerspricht Ad Gaurum klar, passt aber gut zur Annahme des Anonymus
+                            dass die Wahrnehmung noch nicht aktuell vorhanden ist. Auf keinen der
+                            beiden Texte lässt sich das Scholion hier bzw. Vind. Phil. 110 exakt
+                            zurückführen. Da sich beide Texte eigentlich widersprechen und zwei in
+                            der Spätantike offenbar verbreitete Theorien vertreten, dürfte es sich
+                            hier um eine synkretische Position handeln, die über die Jahrhunderte in
+                            Scholien oder mündlicher Diskussion in Schulkontexten entstand. Zudem
+                            könnte es sich auch um eine Interpretation von De anima II.5 handeln,
+                            wonach die Wahrnehmung nur der Wirklichkeit nach vorhanden ist, wenn
+                            auch Wahrnehmungsgegenstände da sind. Nimmt man an, dass das Ungeborene
+                            im Mutterleib von den Wahrnehmungsgegenständen abgeschirmt ist, würde
+                            dies für den Zeitpunkt der Geburt sprechen. Diese Annahme ginge aber
+                            über Aristoteles selbst hinaus.</p>
+               <p>Das Scholion bespricht im Kern den Zusammenhang von Wahrnehmung und Bewegung und
+                  erklärt, warum gerade in diesem Fall nicht von Bewegung auf Wahrnehmung des
+                  ungeborenen Kindes geschlossen werden könne. Dieser Schluss wäre bei Kenntnis von
+                  De motu naheliegend. Daher könnte es sich hier auch einfach um eine Interpretation
+                  vor dem Hintergrund von De motu und De anima handeln, ohne dass es eine andere
+                  Zwischenquelle gegeben hätte.</p>
+               <p>Michael benutzte wohl Ad Gaurum, da sein Kommentar inhaltlich ähnliches bietet,
+                  wenn auch andersartig paraphrasiert. Um Paraphrpasen aus Michaels Kommentar dürfte
+                  es sich nicht handeln. </p>
+               <p>Das ungeborene als Teil des Muttertieres hat Parallelen in juritisch/theologischen
+                  Kontexten. Cf. die Diskussion über die Beschlüsse einer Synode in Neokaisareia
+                  durch Theodoros Balsamonos im 12. Jahrhundert in <bibl sameAs="zotero-116802-9ZJIAWLY" type="ed_weitere">Potles-Rhalles, Vol 1
+                  </bibl>, 424–426. Schlussendlich dürfte es sich um die Verarbeitung verschiedener
+                  Quellen sowie zeitgenössischen Allgemeinwissens handeln, ohne dass eine einzelne
+                  Quelle auszumachen wäre.</p>
+               <p>Das Scholion im Paris. 1921 (m) unterscheidet sich von diesem hier dadurch, dass
+                  es nach dem ersten ἀλλ᾿ Michael zitiert. Der vorherige Abschnitt dürfte demnach
+                  aus einer anderen Tradition als Michaels Kommentar stammen. </p>
+               <p>Cf. Ps.-Galen, Ad Gaurum 46,5–6 ὅτι δὲ μετὰ τὴν τοῦ σώματος τελείωσιν εἰς
+                            φῶς ἐξελθόντων ἀπὸ τῆς μητρὸς ἡ ψυχὴ κατὰ Πλάτωνα εἰσοικίζεται.  </p>
+               <p>Cf. Anonymus Christianus, Hermippus, 61,18–20 πότερον τὴν σύλληψιν ἀρχὴν
+                            χρὴ τιθέσθαι ἢ τὴν εἰς φῶς τοῦ τεχθέντος πρόοδον.</p>
+               <p>Cf. Ps.-Galen, Ad Gaurum 33,4–5 πότερον χρὴ ζῷα ἡγεῖσθαι τὰ ἔμβρυα ἢ
+                            φυτικῶς ζῆν αὐτὰ μόνον. </p>
+               <p>Cf. Anonymus Christianus, Hermippus 61,25–27 λέγει δ᾿ ὁ μέν τις μὴ ζῷα
+                            εἶναι τὰ ἔμβρυα διὰ τὸ φυτικῶς αὐτὰ μόνον ζῆν, ὁ δέ τις ζῷα διὰ τὸ
+                            μέλλειν ἔξω προελθόντα ζωοῦσθαι.</p>
+               <p>Cf. Ps.-Galen, Ad Gaurum 43,24–28 ἀλλὰ πᾶσα(ι) τοπικαὶ κινήσεις αὗται
+                            οὖσαι οὔτε καθ᾿ ὁρμὴν οὔτε κατὰ φαντασίαν ἐκτελουνται, ὡς οὐδὲ αἱ τῶν
+                            ἐμβρύων κινήσεις· καὶ αἱ ἡδοναὶ τοίνυν καὶ αἱ λῦπαι διαχύσεις ἦσαν καὶ
+                            συστολαί, αἳ δὴ κἀν τοῖς φυτοῖς θεωροῦνται ἐκ δίψης τε μαραινομενοῖς καὶ
+                            ἐκ τῆς προσφορᾶς τοῦ ὑγροῦ ἀναθάλλου(σιν).</p>
+               <p>Cf. Ps.-Galen, Ad Gaurum 43,12–15 Αἱ δὲ τοπικαὶ κινήσεις τοῖς ἐμβρύοις
+                            ἐρριζωμένοις κατὰ τὸν ὀμφαλὸν πῶς ἂν εἶεν καθ᾿ ὁρμὴν καὶ φαντασίαν,
+                            ἐοικυῖαι μᾶλλον ἐντέρων στροφαῖς καὶ παλμοῖς μερῶν οἷς ἂν ἀποληφθῇ
+                            πνεῦμα; γίγνονται δὲ καὶ ἐν ἡμῖν μυρίαι τινῶν τοπικαὶ μεταβάσεις
+                            ἀφάνταστοι.</p>
+               <p>Cf. an. II.5  417b16–23 τοῦ δ᾿ αἰσθητικοῦ ἡ μὲν πρώτη μεταβολὴ γίνεται
+                            ὑπὸ τοῦ γεννῶντος, ὅταν δὲ γεννηθῇ, ἔχει ἤδη, ὥσπερ ἐπιστήμην, καὶ τὸ
+                            αἰσθάνεσθαι. τὸ κατ᾿ ἐνέργειαν δὲ ὁμοίως λέγεται τῷ θεωρεῖν· διαφέρει
+                            δέ, ὅτι τοῦ μὲν τὰ ποιητικὰ τῆς ἐνεργείας ἔξωθεν, τὸ ὁρατὸν καὶ τοῦ
+                            ἀκουστὸν, ὁμοίως δὲ καὶ τὰ λοιπὰ τῶν αἰσθητῶν. αἴτιον δ᾿ ὅτι τῶν καθ᾿
+                            ἕκαστον ἡ κατ᾿ ἐνέργειαν αἴσθησις, ἡ δ᾿ ἐπιστήμη τῶν καθόλου. </p>
+               <p>Cf. Anonymus Christianus, Hermippus 62,1–7 ἐγὼ δὲ ὅτι μὲν τὸ τῶν ζῴων
+                            ἴδιον καθ᾿ ὁρμήν τε καὶ αἴσθησιν καὶ φαντασίαν ἐστί, μάλιστα πάντων
+                            πέπεισμαι· ὅτι δὲ οὔπω πρὸς ταῦτα ἧκε τὰ ἔμβρυα, διὰ τοῦτο μηδὲ ζῷα
+                            ἀξιοῦν εἶναι τῶν ἀτόπων ἡγοῦμαι. εἰ γὰρ οἷον ἐμφωλεύουσα τῆς ψυχῆς ἡ
+                            δύναμις ἀναγκαίως ἔτι πρὸς βραχὺ κρύπτεται, ἀλλὰ μετὰ μικρὸν ἀνακύψει
+                            καὶ τὸ ἑαυτῆς τέλειον χορηγήσει. </p>
+               <p>64,3–7 κινεῖται δὲ τὸ ζῷον πρῶτον μὲν θρεπτικῶς καὶ αὐξητικῶς οἰκείως τῷ
+                            σπέρματι, αἰσθητικῶς δὲ προκῦψαν καὶ μετὰ μικρὸν λογικῶς· πάντα δὲ ἔχει
+                            δυνάμει ἐκ τῆς σπερματικῆς γονῆς καὶ οὐδενὸς εἰσκριθέντος ἔξωθεν.</p>
+               <p>Cf. Mich. 52,7–11 τρέφεται γὰρ καὶ ἔμβρυον ὄν, ἀλλ’ οὐχ ᾗ ζῶον, ἀλλ’ ᾗ
+                            φυτόν· ἐπειδὰν δ’ αἴσθησιν λάβῃ, τότε πρῶτον τρέφεται ᾗ ζῶον. ἐγγίνεται
+                            δὲ αὐτῷ ἡ αἰσθητικὴ ψυχὴ ὕστερον ἀποτεχθέντι. αἱ γὰρ συστολαί τε καὶ
+                            ἐκτάσεις μερῶν τινων, ἃς ποιεῖται κατὰ γαστρὸς ὂν, οὐ γίνονται κατ᾿
+                            οἰκείαν αἴσθησιν αὐτῷ, ἀλλ᾿ ὡς ἐμψύχου μέρος κατὰ ταῦτα κινεῖται.</p>
+               <p>Cf. Ps.-Galen, Ad Gaurum 52,31–53,7 καθάπερ ἐπὶ τῶν ἀκροδρύων τὸ πεπανὸν
+                            (ἐ)πέχει τὸ τέλειον, πεπανὸν δὲ ἐν ἐμβρύοις τὸ κατὰ φύσιν ἐκπῖπτον ἀπὸ
+                            τῆς μητρὸς ὡς ἀπὸ τῶν δένδρων τὰ ἀκρόδρυα. οὔπω ἄρα αἰσθητικὸν ὡς τὸ τὴν
+                            ἕξιν (δε)δεγμένον τὸ ἔμβρυον οὐδ᾿ ἄρα δυνάμει οὑτωσί γε· ὀ &lt;γὰρ&gt; ἐν
+                            τοῖς ἀτελέστοις ὀργάνοις αἱ αἰσθητικαὶ (δυ)νάμεις ἔνεισί πω, ὡς οὐδ᾿ ἐν
+                            τοῖς ξύλοις τὴς κώπης τὸ εἶδος. δυνάμει ἄρα αἰσθητικὸν καὶ ὀρεκτικὸν
+                            (καὶ) λογιστικὸν τὸ ἔμβρυον οὐχ ὡς τὸ δεδεγμένον καὶ ἡσυχάζον ἐν τῇ
+                            δυνάμει, ὅτι οὐδὲ καθεύδοντι (ἔ)οικεν, ἀλλ᾿ ὡς τὸ δυνάμενον δέξασθαι καὶ
+                            ἔτι ἀτελές. </p>
+            </note>
+            <note type="derivation">traditional </note>
+            <note type="purpose">exegetisch </note>
+            <relatedItem type="editedText">
+               <ref type="Bekker" subtype="Scholien" cRef="456a32 456a33 456a34"/>
+            </relatedItem>
+            <relatedItem>
+               <ref type="Identisch mit" target="#cagb6755807"/>
+            </relatedItem>
+            <relatedItem>
+               <ref type="Scholien" cRef="Somn. Vig."/>
+            </relatedItem>
+            <relatedItem type="sameTopic">
+               <ref target="cagb0332006"/>
+            </relatedItem>
+            <relatedItem type="sameTopic">
+               <ref target="cagb0337406"/>
+            </relatedItem>
+            <relatedItem type="sameTopic">
+               <ref target="cagb0335939"/>
+            </relatedItem>
+            <relatedItem type="sameTopic">
+               <ref target="cagb0336057"/>
+            </relatedItem>
+            <relatedItem type="sameTradition">
+               <ref target="cagb0332229"/>
+            </relatedItem>
+            <relatedItem type="sameTopic">
+               <ref target="cagb0331955"/>
+            </relatedItem>
+            <relatedItem type="sameTopic">
+               <ref target="cagb0333213"/>
+            </relatedItem>
+            <relatedItem type="sameTradition">
+               <ref target="cagb0336971"/>
+            </relatedItem>
+            <relatedItem type="sameTradition">
+               <ref target="cagb0330102"/>
+            </relatedItem>
+         </notesStmt>
+         <sourceDesc>
+            <listWit n="Textzeugen">
+               <head>Textzeugen</head>
+               <witness xml:id="mxh_ycp_stb">
+                  <title>Paris. gr. 1859 H2</title>
+                  <idno type="sigle">b2</idno>
+                  <idno type="diktyon">51485</idno>
+                  <locus rend="outer_margin" facs="233v"/>
+               </witness>
+            </listWit>
+            <listWit n="Publikationen">
+               <head>Publizierte Quellen</head>
+               <witness xml:id="z1y_4jt_h5b">
+                  <title>Michael Ephesius, (1903): Michaelis Ephesii in Parva naturalia
+                     commentaria, Reimer Berolini.</title>
+                  <bibl sameAs="zotero-116802-824UGTI8"/>
+                  <idno type="sigle">Mich.</idno>
+               </witness>
+               <witness xml:id="d4z_bk5_mwb">
+                  <title>Porphyrios, (1895): Die neuplatonische, fälschlich dem Galen
+                     zugeschriebene Schrift Πρὸς Γαῦρον περὶ τοῦ πῶς ἐμψθχοῦται τὰ ἔμβρυα,
+                     Berlin.</title>
+                  <bibl sameAs="zotero-116802-HG5UVQK7"/>
+                  <idno type="sigle">Porph.</idno>
+               </witness>
+               <witness xml:id="ah5_zgt_szb">
+                  <title>Anonymus Christianus, (1895): Hermippus De astrologia dialogus, Teubner
+                     Leipzig.</title>
+                  <bibl sameAs="zotero-116802-Q3ZJ2LAC"/>
+                  <idno type="sigle">Anonymus Christianus Hermippus</idno>
+               </witness>
+            </listWit>
+         </sourceDesc>
+      </fileDesc>
+      <profileDesc>
+         <creation>
+            <date notBefore-iso="1444" notAfter-iso="1457" cert="high"/>
+         </creation>
+      </profileDesc>
+      <encodingDesc>
+         <refsDecl xml:id="Bekker">
+            <cRefPattern matchPattern="(\d?\d?\d?\d[ab]\d\d)"
+                         replacementPattern="#xpath(/tei:TEI/tei:text//tei:lb[@n='$1'])">
+               <p>Referenzen beziehen sich auf Bekkerzeilen. Diese werden alle explizit ohne Bindestrich eingegeben. 
+                            Der Bekkertext mit befindet sich in der Datenbank als XML</p>
+            </cRefPattern>
+         </refsDecl>
+         <refsDecl xml:id="CAG">
+            <cRefPattern matchPattern="(\d+(,\d)?):(\d+)\.(\d+)(–\d+\.\d+)?"
+                         replacementPattern="#xpath(/tei:TEI/tei:text//tei:lb[@n='$3.$4'])">
+               <p>Für Referenzen auf gedruckte CAG-Bände werden die Reihennummer,
+                            Seiten- und Zeilenzahl angegeben. Die referenzierten CAG-Texte befinden sich in der Datenbank als XML.</p>
+            </cRefPattern>
+         </refsDecl>
+         <refsDecl xml:id="other">
+            <cRefPattern matchPattern="(\d+)\.(\d+)(–\d+\.\d+)?"
+                         replacementPattern="#xpath(/tei:TEI/tei:text//tei:lb[@n='$1.$2'])">
+               <p>Für Referenzen auf andere Printeditionen werden Seiten- sowie Zeilenzahlen angegeben.</p>
+            </cRefPattern>
+         </refsDecl>
+         <refsDecl xml:id="CTS">
+            <cRefPattern matchPattern="(.+)"
+                         replacementPattern="#xpath(/tei:TEI/tei:text/tei:body/tei:div[@type='edition']/tei:div[@n='$1'])"/>
+         </refsDecl>
+         <editorialDecl>
+    <interpretation n="Bekker" method="markup">
+        <p>Zitate beziehungsweise inhaltliche Entsprechungen werden im Text mittels <gi>quote</gi> ausgezeichnet. 
+            Dabei zeigt <att>type</att>, ob es sich um ein wörtliches Zitat, Simile oder Paraphrase handelt. 
+            Innerhalb des <gi>quote</gi>, nach dem Text, steht ein <gi>ref</gi> mit <att>decl</att>
+            mit dem Wert "#Bekker" und <att>cRef</att> mit der Referenz
+            in der der entsprechenden <gi>refsDecl</gi> beschriebenen Form</p>
+    </interpretation>
+    <interpretation n="CAG" method="markup">
+        <p>Zitate beziehungsweise inhaltliche Entsprechungen werden im Text mittels <gi>quote</gi> ausgezeichnet. 
+            Dabei zeigt <att>type</att>, ob es sich um ein wörtliches Zitat, Simile oder Paraphrase handelt. 
+            Innerhalb des <gi>quote</gi>, nach dem Text, steht ein <gi>ref</gi> mit <att>decl</att>
+            mit dem Wert aus der <att>xml:id</att> der enstprechenden <gi>refsDecl</gi> und <att>cRef</att> mit der Referenz
+            in der der entsprechenden <gi>refsDecl</gi> beschriebenen Form</p>
+    </interpretation>
+    <correction method="markup">
+        <p>Im Falle von Korrekturen im Text durch die Edierenden wird <gi>choice</gi> verwendet,
+            welches <gi>sic</gi> und <gi>corr</gi> für das falsche Original und die Korrektur umschließt.</p>
+    </correction>
+    <normalization n="abbreviations" method="markup">
+        <p>Auflösung von Abkürzungen (auch nomina sacra) mittels <gi>choice</gi>, <gi>abbr</gi> und <gi>expan</gi>.</p>
+    </normalization>
+    <normalization n="suspension-unclear" method="markup">
+        <p>Ergänzung fehlender Endungen (Suspension), wenn diese zwar sehr wahrscheinlich, aber theoretisch nicht eindeutig sind sowie
+            fehlender Wortteile, die aus dem Kontext rekonstruierbar, aber durch physischen Verlust verloren sind, mittels <gi>ex</gi></p>
+    </normalization>
+    <normalization n="suspension-clear" method="silent">
+        <p>Ergänzung von durch den Schreiber ausgelassenen Wortendungen (Suspension), wenn die gemeinte Endung eindeutig ist.
+            Das ist dann der Fall, wenn es keine alternativ möglichen Worte gibt oder diese durch den Kontext ausgeschlossen sind.</p>
+    </normalization>
+    <punctuation marks="all">
+        <p>Die Interpunktion in der Transkription folgt jener des Originals unabhängig von modernen Konventionen.
+            Nur in Fällen, in denen die originale Interpunktion für moderne Lesende irreführend ist, wurde eine Normalisierung
+            vorgenommen. Diese sind alle als Normalisierungen ausgezeichnet. Stile Normalisierungen wurden nicht vorgenommen.</p>
+    </punctuation>
+</editorialDecl>
+         <schemaRef url="https://gitup.uni-potsdam.de/TELOTA/cluster-alte-welt/cagb/cagb-data-github/-/tree/main/data/schemata/cagb_texte_11_24.rng"/>
+      </encodingDesc>
+      <revisionDesc status="final">
+         <change when-iso="2024-12-31" who="mamueller">Version 1.0</change>
+      </revisionDesc>
+   </teiHeader>
+   <text xml:lang="grc">
+      <body>
+         <quote type="witText">φανερὸν <lb/>ὅτι ἐπεὶ ἀναγκαῖον τῶ ζώω ὅταν<metamark xml:id="nfp2_ykv_mwb"
+                      function="refSign"
+                      place="superlinear"
+                      ed="#mxh_ycp_stb"/> αἴσθησιν ἔχη<ex>, τό</ex>
+            <lb break="no"/>τε πρῶτον
+                        τροφὴν <subst>
+               <del rendition="#ow">κατα</del>
+               <add place="intralinear">τὲ </add>
+            </subst>λαμβάνειν καὶ αὔξησιν</quote>
+         <p>
+            <seg type="comment" subtype="apparatus_fontium">
+               <orig>
+                  <supplied cert="high">ὅταν</supplied>
+                  <ex>εἰ</ex>ς φῶς ἔλθωσιν</orig>
+               <note xml:id="nzxs_bsb_nwb" type="editorial">Cf. Ps.-Galen, Ad Gaurum 46,5–6 Cf.
+                  Anonymus Christianus, Hermippus, 61,18–20</note>
+            </seg>· <seg type="comment" subtype="apparatus_fontium">
+               <orig>ἐν γὰρ τῆ <lb/>
+                  <ex>μήτ</ex>ρα φυτικὴν οἷον ζῶσι ζ<unclear reason="illegible" cert="high">ωὴν</unclear>
+               </orig>
+               <note xml:id="nl1r_5sb_nwb" type="editorial">Cf. Ps.-Galen, Ad Gaurum 33,4–5 Cf.
+                  Anonymus Christianus, Hermippus 61,25–27</note>
+            </seg>. <lb/>
+            <seg type="comment" subtype="apparatus_fontium">
+               <orig>κἂν καὶ κινῆται κινήσεις <lb/>τινὰς ἐν τῆ μήτρα</orig>
+               <note xml:id="nxbj_55b_nwb" type="editorial">Cf. Ps.-Galen, Ad Gaurum 43,24–28</note>
+            </seg> ἀλλ᾿ <seg type="comment" subtype="apparatus_fontium">
+               <orig>οὐ<lb break="no"/>κ ἴδιοι αὗται· ἀλλ᾿ ἢ κατὰ <lb/>τοῦτο καθ᾿ ὃσον ὡς μέρος ἐν
+                  ὅλω</orig>
+               <note xml:id="nfvm_xvb_nwb" type="editorial">Cf. Ps.-Galen, Ad Gaurum
+                  43,12–15</note>
+            </seg>. <lb/>
+            <seg type="comment" subtype="apparatus_fontium">
+               <orig>ὅταν δὲ ἀποτεχθῆ, τότε τελεία <lb/>ἡ αἴσθησις αὐτῶ</orig>
+               <note xml:id="nc35_x1c_nwb" type="editorial">Cf. an. II.5 417b16–23 Cf. Anonymus
+                  Christianus, Hermippus 62,1–7; 64,3–7</note>
+            </seg>:</p>
+      </body>
+   </text>
+   <text xml:lang="de">
+      <body>
+         <p>Wenn es ans Licht kommt. In der Gebärmutter führt das Tier nämlich ein
+                            pflanzenartiges Leben. Auch wenn es irgendwelche Bewegungen in der
+                            Gebärmutter vollführt, sind dies keine eigenen Bewegungen oder aber [es
+                            bewegt sich nur] in soweit, wie es Teil in einem Ganzen ist. Nach der
+                            Geburt aber, hat es die vollendete Wahrnehmung.</p>
+      </body>
+   </text>
+</TEI>
