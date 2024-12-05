@@ -1,0 +1,27 @@
+message: "If you use this dataset, please cite it using the metadata in the CFF file."
+authors:
+  - family-names: Müller
+    given-names: Martin
+    orcid: "https://orcid.org/0009-0001-8601-3587"
+  - family-names: Fechner
+    given-names: Martin
+    orcid: "https://orcid.org/0000-0001-9233-0653"
+  - family-names: Fischer
+    given-names: Gordon
+    orcid: "https://orcid.org/0009-0003-3822-7673"
+  - family-names: Agiotis
+    given-names: Nikos
+    orcid: "https://orcid.org/0009-0005-0968-0510"
+  - family-names: Koch
+    given-names: Lutz
+    orcid: "https://orcid.org/0009-0005-4856-5400"
+  - family-names: Brockmann
+    given-names: Christian
+    orcid: "https://orcid.org/0009-0002-3552-2987"
+title: TEI-XML-Datenset der Scholien zu Somn. Vig. des Vorhabens Commentaria in Aristotelem Graeca et Byzantina (Version 1) 
+date-released: "2024-12-31"
+version: 1.0.0
+repository-code: "https://github.com/telota/cagb-digital"
+license: CC-BY-SA-4.0
+url: "https://cagb-digital.de/"
+cff-version: 1.2.0
