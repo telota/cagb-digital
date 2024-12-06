@@ -17,7 +17,7 @@ Das Schema zum Datenmodell ist im Repository im Ordner `/schemata` zu finden:
 
 Eine genauere Dokumentation zur Edition der Scholien findet sich im Ordner `/documentation`:
 
-- [Martin Müller (2024): Die digitale Edition von Scholien zu Aristoteles: Anforderungen an ein TEI-konformes Datenmodell und dessen Umsetzung am Beispiel einer Edition der griechischen Scholien zu Aristoteles’ Περὶ ὕπνου καὶ ἐγρηγόρσεως (Über Schlafen und Wachen)](/documentation/MM_Die_digitale_Edition_von_Scholien_zu%20Aristoteles_2024.pdf).
+- [Martin Müller (2024): Die digitale Edition von Scholien zu Aristoteles: Anforderungen an ein TEI-konformes Datenmodell und dessen Umsetzung am Beispiel einer Edition der griechischen Scholien zu Aristoteles’ Περὶ ὕπνου καὶ ἐγρηγόρσεως (Über Schlafen und Wachen)](/documentation/Mueller_2024_Die_digitale_Edition_von_Scholien_zu_Aristoteles.pdf).
 
 ## Lizenz
 
