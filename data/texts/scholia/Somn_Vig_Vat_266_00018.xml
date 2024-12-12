@@ -244,7 +244,7 @@
          <figure>
             <app>
                <lem resp="editor" cert="high">
-                  <graph type="directed" corresp="Syllogismus_1_Pro_4.svg" ana="1-barbara">
+                  <graph type="directed" corresp="Syllogismus_1_Pro_4.svg" ana="1-barbara" facs="Somn_Vig_Vat_266_00018.jpg">
                      <node xml:id="A" corresp="Syllogismus_1_Pro_4.svg#A" ana="unterbegriff">
                         <label>ἐναίμοις <lb/>ὑποληπτέον</label>
                      </node>
