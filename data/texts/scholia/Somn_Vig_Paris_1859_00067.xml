@@ -270,7 +270,7 @@
          <figure>
             <app>
                <lem resp="editor" cert="high">
-                  <graph type="directed" corresp="Syllogismus_1.svg" ana="1-barbara">
+                  <graph type="directed" corresp="Syllogismus_1.svg" ana="1-barbara" facs="Somn_Vig_Paris_1859_00067.jpg">
                      <node xml:id="A" corresp="Syllogismus_1.svg#A" ana="unterbegriff">
                         <label>τέλος</label>
                      </node>
